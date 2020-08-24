@@ -29,4 +29,4 @@ At the very core of my portfolio is [GatsbyJS](https://www.gatsbyjs.com/), a sta
 This software is provided as-is and without warranty or support - while this is my personal website, please use the source code as a learning resource.
 
 ---
-Copyright (c) 2020 Tom Mitchelmore
+Copyright © 2020 Tom Mitchelmore
