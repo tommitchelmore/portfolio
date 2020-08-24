@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import {StaticQuery, graphql} from "gatsby"
 import SEO from "../components/seo"
-import cms from "netlify-cms-app"
 
 const IndexPage = ({data}) => (
       <Layout>
