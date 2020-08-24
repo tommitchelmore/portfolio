@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+:root {
+    --primary: rgba(55, 48, 139, 1) /*#37308b*/;
+    --primary-lighten-1: rgba(55, 48, 139, 0.5) /*#df80a4*/;
+    --primary-lighten-2: rgba(55, 48, 139, 0.2);
+    --secondary: rgba(223, 128, 164, 1);
+    --secondary-lighten-1: rgba(223, 128, 164, 0.5);
+    --secondary-lighten-2: rgba(223, 128, 164, 0.2);
+    --accent: rgba(118, 221, 200, 1);
+    --white: rgba(251,247,245, 1);
+    --grey: rgba(46, 46, 46, 1);
+    --grey-lighten-1: rgba(46, 46, 46, 0.5);
+    --grey-lighten-2: rgba(46, 46, 46, 0.2);
+    --gradient: linear-gradient(to bottom, #3a338a, #7a5295);
+    --gradient-2: linear-gradient(to top right, #3a338a, #7a5295);
+    --accent-gradient: linear-gradient(to left, rgba(118, 221, 200, 1), rgba(92, 173, 157, 1));
+
+    --font-family: Poppins, sans-serif;
+    --font-light: 300;
+    --font-normal: 400;
+    --font-bold: 500;
+    --font-xbold: 700;
+}
+.grecaptcha-badge {
+    visibility: collapse !important;
+}
+* {
+    font-family: var(--font-family);
+    color: var(--grey);
+}
+ion-icon {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: var(--font-bold);
+}
+h1.lead {
+    font-weight: var(--font-xbold);
+}
+h1.section-lead {
+    font-weight: var(--font-xbold);
+    position: relative;
+}
+h1.section-lead:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 3px;
+    background: var(--accent-gradient);
+}
+h1.section-lead.text-right:before {
+    left: auto;
+    right: 0;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: var(--font-normal);
+}
+h3 {
+    font-size: 1.75rem;
+    font-weight: var(--font-normal);
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: var(--font-normal);
+}
+h5 {
+    font-size: 1.25rem;
+    font-weight: var(--font-normal);
+}
+h6 {
+    font-size: 1rem;
+    font-weight: var(--font-normal);
+}
+p {
+    font-size: 1rem;
+    font-weight: var(--font-light);
+}
+p.lead {
+    font-size: 1.5rem;
+}
+p.subtitle {
+    font-size: 1.3rem;
+    color: var(--grey-lighten-1);
+    margin: 0 0 2rem 0;
+    position: relative;
+}
+p.subtitle.text-white {
+    color: var(--white) !important;
+}
+.text-right {
+    text-align: right;
+}
+a {
+    text-decoration: none;
+}
+.primary {
+    background: var(--primary);
+}
+.primary-lighten-1 {
+    background: var(--primary-lighten-1);
+}
+.primary-lighten-2 {
+    background: var(--primary-lighten-2);
+}
+.secondary {
+    background: var(--secondary);
+}
+.secondary-lighten-1 {
+    background: var(--secondary-lighten-1);
+}
+.secondary-lighten-2 {
+    background: var(--secondary-lighten-2);
+}
+.accent {
+    background: var(--accent);
+}
+.white {
+    background: var(--white);
+}
+.dark {
+    background: var(--grey);
+}
+.gradient {
+    background: var(--gradient);
+}
+.gradient-2 {
+    background: var(--gradient-2);
+}
+.text-primary {
+    color: var(--primary);
+}
+.text-primary-lighten-1 {
+    color: var(--primary-lighten-1);
+}
+.text-primary-lighten-2 {
+    color: var(--primary-lighten-2);
+}
+.text-secondary {
+    color: var(--secondary);
+}
+.text-secondary-lighten-1 {
+    color: var(--secondary-lighten-1);
+}
+.text-secondary-lighten-2 {
+    color: var(--secondary-lighten-2);
+}
+.text-accent {
+    color: var(--accent);
+}
+.text-white {
+    color: var(--white);
+}
+.text-dark {
+    color: var(--grey);
+}
+.btn {
+    text-decoration: none;
+    padding: 0.5rem 1.1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--font-bold);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.btn + .btn {
+    margin-left: 1rem;
+}
+.btn-large {
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 100px 15px 100px;
+    border-radius: 15px;
+    font-size: 1.75rem;
+    font-weight: var(--font-bold);
+}
+.btn-fill {
+    width: 100%;
+    display: inline-block;
+}
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    border: solid 3px var(--primary);
+    transition: all 0.2s;
+}
+.btn-primary:hover {
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    background: var(--white);
+    color: var(--primary);
+}
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--primary);
+}
+.btn-accent {
+    background: var(--accent-gradient);
+    color: var(--white);
+}
+body,html {
+    margin: 0;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+section {
+    position: relative;
+}
+nav {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+    transition: background-color 0.2s;
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+}
+nav svg {
+    fill: var(--white);
+}
+nav .nav-brand a {
+    font-size: 1.5rem;
+    font-weight: var(--font-bold);
+}
+nav .nav-links {
+    margin-left: auto;
+}
+nav .nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+nav .nav-links li {
+    list-style: none;
+    padding: 0 0.5rem 0 0.5rem;
+    margin: 0 1rem 0 1rem;
+}
+nav .nav-links li a {
+    font-size: 1.5rem;
+    font-weight: var(--font-bold);
+}
+nav .nav-links li.active {
+    border-bottom: solid 2px var(--accent);
+}
+nav .nav-links li:hover a {
+    color: var(--accent);
+}
+nav .nav-collapse {
+    margin-left: auto;
+}
+nav .nav-collapse a span {
+    font-size: 48px;
+}
+nav.alt {
+    background-color: var(--white);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+}
+nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
+    color: var(--primary) !important;
+    fill: var(--primary) !important;
+}
+.nav-mobile {
+    position: fixed;
+    z-index: 5;
+    box-sizing: border-box;
+    padding: 100px;
+    top: 0;
+    left: 0;
+    background: var(--white);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    width: 100vw;
+    height: 100vh;
+    clip-path: circle(0% at 50% 50%);
+}
+.card {
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.06);
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid 3px white;
+    transition: border 0.3s, box-shadow 0.3s;
+    margin-bottom: 2rem;
+}
+#service-card .card-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+#service-card .card-icon ion-icon {
+    position: absolute;
+    font-size: 48px;
+    color: var(--white);
+    transition: transform 0.4s;
+}
+#service-card .card-icon svg {
+    width: 70% !important;
+}
+#service-card .card-icon svg g:last-child path {
+    transform: rotate(25deg);
+    opacity: 50%;
+    transition: transform 0.8s;
+}
+.card-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card-content h2 {
+    margin: 0;
+    text-align: center;
+    font-weight: var(--font-xbold);
+    width: 100%;
+}
+.card-content h6 {
+    margin: 0;
+    text-align: center;
+    font-weight: var(--font-light);
+    color: var(--secondary);
+    text-transform: capitalize;
+}
+.card-content p {
+    margin: 2rem 0 2rem 0;
+}
+.card-content a, .card-content a ion-icon {
+    transition: color 0.2s;
+    position: relative;
+}
+.card-content a:hover, .card-content a:hover ion-icon {
+    color: var(--accent);
+}
+.card:hover {
+    border: solid 3px var(--accent);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
+}
+.card:hover ion-icon {
+    transform: rotate(-360deg);
+}
+#service-card:hover svg g:last-child path {
+    transform: rotate(45deg);
+}
+
+
+#contact form {
+
+}
+#contact form > div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem 2rem 1rem;
+}
+#contact form > div > div {
+    padding-bottom: 1rem;
+}
+#contact label, #contact input, #contact textarea {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    font-weight: var(--font-light);
+}
+#contact input, #contact textarea {
+    padding: 0.3rem 0.8rem;
+    box-sizing: border-box;
+    border: solid 2px white;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.06);
+    transition: box-shadow 0.5s, border 0.5s;
+    position: relative;
+}
+#contact input:focus, #contact textarea:focus {
+    border: solid 3px var(--accent);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    outline: 0;
+}
+#contact input.invalid, #contact textarea.invalid {
+    border: solid 2px #ff464e;
+}
+#contact label.invalid {
+    display: none !important;
+}
+#contact textarea {
+    resize: none;
+}
+#contact p.note {
+    font-size: 0.8rem;
+    margin: 0
+}
+#contact p.note a:hover {
+    text-decoration: underline;
+}
+.alert {
+    padding: 0.3rem 0.8rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.06);
+    border-radius: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.alert-success {
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    color: var(--white);
+}
+.alert-danger {
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    color: var(--white);
+}
+.waves.waves-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+.waves2.waves-top {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%
+}
+.waves-fix.waves-top {
+    position: absolute;
+    top: -5px;
+    height: 10px;
+    left: 0;
+    width: 100%;
+    background: var(--white)
+}
+.waves.waves-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+.waves2.waves-bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%
+}
+.waves-fix.waves-bottom {
+    position: absolute;
+    bottom: -5px;
+    height: 20px;
+    left: 0;
+    width: 100%;
+    background: var(--white)
+}
+.waves svg path {
+    fill: var(--white);
+}
+.waves2 svg path {
+    fill: var(--secondary-lighten-2);
+}
+.waves, .waves2 {
+    pointer-events: none;
+}
+footer h3 {
+    font-weight: var(--font-xbold);
+}
+footer ul {
+    padding-left: 0;
+}
+footer li {
+    list-style: none;
+}
+footer h3, footer p, footer .social-icons {
+    margin: 0 0 2rem 0;
+}
+footer ul, footer li {
+    margin: 0 0 1rem 0;
+}
+footer a {
+    color: var(--white);
+    font-weight: var(--font-light);
+}
+footer ion-icon {
+    color: var(--white);
+    padding-right: 1rem;
+}
+footer .bottom {
+    border-top: solid 1px rgba(255,255,255,0.2);
+    margin: 4rem 0 0 0;
+    padding: 2rem 0;
+    font-weight: var(--font-light);
+}
+footer .bottom p {
+    margin: 0;
+}
+footer .bottom a {
+    transition: color 0.3s;
+}
+footer .bottom a:hover {
+    color: var(--secondary);
+}
