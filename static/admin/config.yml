@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+- name: 'portfolio'
+  label: 'portfolio'
+  folder: 'content/portfolio'
+  create: true
+  slug: 'portfolio'
+  media_folder: ''
+  public_folder: ''
+  path: '{{title}}/index'
+  editor:
+    preview: true
+  fields:
+  - { label: 'Title', name: 'title', widget: 'string' }
+  - { label: 'Description', name: 'description', widget: 'string' }
+  - { label: 'Body', name: 'body', widget: 'markdown' }
