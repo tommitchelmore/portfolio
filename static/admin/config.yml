@@ -18,5 +18,22 @@ collections:
   fields:
   - { label: 'Title', name: 'title', widget: 'string' }
   - { label: 'Description', name: 'description', widget: 'string' }
+  - { label: 'Thumbnail', name: 'thumbnail', widget: 'image' }
+  - { label: 'Image', name: 'image', widget: 'image' }
   - { label: 'Summary', name: 'summary', widget: 'string' }
   - { label: 'Body', name: 'body', widget: 'markdown' }
+  
+- name: 'clients'
+  label: 'client'
+  folder: 'content/clients'
+  create: true
+  slug: 'client'
+  media_folder: ''
+  public_folder: ''
+  path: '{{title}}/index'
+  editor:
+    preview: true
+  fields:
+  - { label: 'Name', name: 'name', widget: 'string' }
+  - { label: 'Website', name: 'url', widget: 'string' }
+  - { label: 'Logo', name: 'thumbnail', widget: 'image' }
