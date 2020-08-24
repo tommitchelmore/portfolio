@@ -147,7 +147,7 @@ const IndexPage = ({data}) => (
                                         <h2>{node.frontmatter.title}</h2>
                                         <h6>{node.frontmatter.description}</h6>
                                         <p style={{width: '100%'}}>{node.frontmatter.summary}</p>
-                                        <a href=""> Read more <ion-icon name="chevron-forward-outline"/> </a>
+                                        <a href={'/portfolio/' + node.frontmatter.title.toLowerCase().replace(' ', '-')}> Read more <ion-icon name="chevron-forward-outline"/> </a>
                                     </div>
                                 </div>
                             </div>
