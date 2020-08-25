@@ -336,7 +336,7 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
 }
 #service-card .card-icon svg g:last-child path {
     transform: rotate(25deg);
-    opacity: 50%;
+    opacity: 0.6;
     transition: transform 0.8s;
 }
 .card-content {
@@ -360,18 +360,11 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
 .card-content p {
     margin: 2rem 0 0 0;
 }
-.card-content a, .card-content a ion-icon {
-    transition: color 0.2s;
-    position: relative;
-}
-.card-content a:hover, .card-content a:hover ion-icon {
-    color: var(--accent);
-}
 .card:hover {
     border: solid 3px var(--accent);
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
 }
-.card:hover ion-icon {
+.card:hover svg:first-child {
     transform: rotate(-360deg);
 }
 #service-card:hover svg g:last-child path {
