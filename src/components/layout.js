@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import '../assets/style.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
+import particlesConfig from "./particlesConfig"
+import Particles from "react-particles-js"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +30,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer className={"gradient-2"} style={{position: "relative"}}>
           <div>
-            <div id="particles-container-2" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} />
+            <Particles id="particles-container" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} params={particlesConfig} />
             <div className="waves-fix waves-top" />
             <div className="waves2 waves-top">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -77,10 +79,10 @@ const Layout = ({ children }) => {
                 <div className="col">
                   <div className="col bottom text-white d-flex flex-wrap justify-content-between" style={{wordWrap: 'break-word'}}>
                     <div className="p-0 flex-grow-1">
-                      <p className="text-white">Design concept by <a href="https://charliefitzpatrick.co.uk/">Charlie Fitzpatrick</a>, built by <a href="/">Tom Mitchelmore</a></p>
+                      <p className="text-white">Built with React and Gatsby</p>
                     </div>
                     <div className="p-0">
-                      <p className="text-white">2020 Tom Mitchelmore</p>
+                      <p className="text-white">© 2020 Tom Mitchelmore</p>
                     </div>
                   </div>
                 </div>

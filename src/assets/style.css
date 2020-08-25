@@ -11,8 +11,9 @@
     --grey: rgba(46, 46, 46, 1);
     --grey-lighten-1: rgba(46, 46, 46, 0.5);
     --grey-lighten-2: rgba(46, 46, 46, 0.2);
-    --gradient: linear-gradient(to bottom, #3a338a, #7a5295);
-    --gradient-2: linear-gradient(to top right, #3a338a, #7a5295);
+    /*--gradient: linear-gradient(to bottom, #3a338a, #7a5295);*/
+    --gradient: linear-gradient(to bottom, #3a338a, #8E2DE2);
+    --gradient-2: linear-gradient(to top right, #3a338a, #8E2DE2);
     --accent-gradient: linear-gradient(to left, rgba(118, 221, 200, 1), rgba(92, 173, 157, 1));
 
     --font-family: Poppins, sans-serif;
@@ -78,8 +79,9 @@ h6 {
     font-weight: var(--font-normal);
 }
 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: var(--font-light);
+    color: var(--grey);
 }
 p.lead {
     font-size: 1.5rem;
@@ -156,8 +158,26 @@ a {
 .text-white {
     color: var(--white);
 }
+.text-white-50 {
+    color: var(--white);
+    opacity: 0.6;
+}
 .text-dark {
     color: var(--grey);
+}
+.header-lead:first-child {
+    color: var(--white);
+    opacity: 0.5;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    font-weight: var(--font-normal);
+}
+.header-lead:nth-child(2) {
+    color: var(--white);
+    margin-top: 0;
+    font-size: 4rem;
+    margin-bottom: 0;
+    font-weight: var(--font-xbold);
 }
 .btn {
     text-decoration: none;
@@ -293,6 +313,9 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
     transition: border 0.3s, box-shadow 0.3s;
     margin-bottom: 2rem;
 }
+.services-cards {
+    padding-bottom: 3rem;
+}
 #service-card .card-icon {
     width: 100%;
     display: flex;
@@ -300,13 +323,15 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
     align-items: center;
     margin-bottom: 1rem;
 }
-#service-card .card-icon ion-icon {
+#service-card .card-icon svg:first-child {
     position: absolute;
     font-size: 48px;
-    color: var(--white);
     transition: transform 0.4s;
 }
-#service-card .card-icon svg {
+#service-card .card-icon svg:first-child path {
+    color: var(--white);
+}
+#service-card .card-icon svg:not(:first-child) {
     width: 70% !important;
 }
 #service-card .card-icon svg g:last-child path {
@@ -333,7 +358,7 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
     text-transform: capitalize;
 }
 .card-content p {
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 0 0;
 }
 .card-content a, .card-content a ion-icon {
     transition: color 0.2s;

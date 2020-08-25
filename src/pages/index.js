@@ -1,22 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import {StaticQuery, graphql} from "gatsby"
-import SEO from "../components/seo"
+import {graphql} from "gatsby"
+import ServiceCard from "../components/ServiceCard"
+import { CgCodeSlash, CgGitFork, CgServer } from "react-icons/all"
+import Particles from "react-particles-js"
+import particlesConfig from "../components/particlesConfig"
 
-const IndexPage = ({data}) => (
+const IndexPage = ({data}) => {
+    let parallax;
+    return (
       <Layout>
           <div>
               <section style={{background: 'var(--gradient)'}}>
-                  <div id="particles-container" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} />
+                  <Particles id="particles-container" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} params={particlesConfig} />
                   <div className="container">
                       <div className="row d-flex align-content-center headerContent" style={{height: '100vh'}}>
-                          <div className="col-12" id="trigger">
-                              <h1 className="text-white lead d-none d-md-block">Full stack web developer and systems administrator with proven abilities in javascript, PHP and more.</h1>
-                              <h1 className="text-white lead d-block d-md-none">Full stack web developer and systems administrator.</h1>
-                              <p className="lead text-secondary pb-4">Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
-                          </div>
+                          <h1 className="header-lead" style={{width: '100%'}}>HEY THERE!</h1>
+                          <h1 className="header-lead">I'm Tom</h1>
+                          <p className="lead text-secondary pb-4">Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
                           <div className="col-12">
                               <a href style={{display: 'inline-block'}} className="btn-large btn-accent d-none d-md-inline-block">Learn More</a>
                           </div>
@@ -37,85 +39,99 @@ const IndexPage = ({data}) => (
               </section>
               <section className="white" id="about">
                   <div className="container">
-                      <div className="row d-flex justify-content-center services-cards">
+                      <div className="row d-flex justify-content-center">
                           <div className="col-12">
-                              <h1 className="section-lead mb-0" id="service-title">Services</h1>
-                              <p className="subtitle" id="service-title">A little about what I can do</p>
+                              <h1 className="section-lead mb-0" id="service-title">About me</h1>
+                              <p className="subtitle" id="service-title">A little about me and what I can do</p>
+                              <p>
+                                  Hey! I'm Tom and I'm an undergraduate student of Computer Science at the University of Southampton in the UK.
+                                  Currently, alongside my studies, I work for a small game server hosting company as a systems administrator
+                                  and am actively learning React, Java and Python.
+                              </p>
+                              <p className={"mb-5"}>
+                                  Aside from this, I love reading, spending time outdoors and exploring my new city.
+                              </p>
+                          </div>
+                      </div>
+
+                      <div className="row d-flex justify-content-center align-items-center services-cards">
+                          <div className="col-12 col-md-6 col-lg-4 ">
+                              <ServiceCard
+                                title="Web"
+                                description="Development and design"
+                                body="With experience in Static/Dynamic Websites, Javascript, React and a plethora of backend languages/frameworks, I'm more than ready for projects in the web."
+                                icon={<CgCodeSlash />}
+                                color={["#8E2DE2", "#4A00E0"]}
+                                svg={
+                                    <svg width="50%" height="auto" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                        <linearGradient id="gradient1" gradientTransform="rotate(30)">
+                                            <stop offset="0%" stopColor="#8E2DE2" />
+                                            <stop offset="100%" stopColor="#4A00E0" />
+                                        </linearGradient>
+                                        <g transform="translate(300,300)">
+                                            <path d="M150.9,-167.9C176.4,-125.4,164.7,-62.7,161,-3.7C157.4,55.4,161.8,110.8,136.3,147.8C110.8,184.8,55.4,203.4,8.4,195C-38.7,186.7,-77.3,151.3,-122.3,114.3C-167.3,77.3,-218.7,38.7,-217,1.6C-215.4,-35.4,-160.7,-70.7,-115.7,-113.2C-70.7,-155.7,-35.4,-205.4,13.7,-219C62.7,-232.7,125.4,-210.4,150.9,-167.9Z" fill="url(#gradient1)" />
+                                        </g>
+                                        <g transform="translate(300,300)">
+                                            <path d="M150.9,-167.9C176.4,-125.4,164.7,-62.7,161,-3.7C157.4,55.4,161.8,110.8,136.3,147.8C110.8,184.8,55.4,203.4,8.4,195C-38.7,186.7,-77.3,151.3,-122.3,114.3C-167.3,77.3,-218.7,38.7,-217,1.6C-215.4,-35.4,-160.7,-70.7,-115.7,-113.2C-70.7,-155.7,-35.4,-205.4,13.7,-219C62.7,-232.7,125.4,-210.4,150.9,-167.9Z" fill="url(#gradient1)" />
+                                        </g>
+                                    </svg>
+                                }
+                              />
                           </div>
                           <div className="col-12 col-md-6 col-lg-4 ">
-                              <div className="card text-dark" id="service-card" style={{background: 'white'}}>
-                                  <div className="card-icon">
-                                      <ion-icon name="code-slash-outline" />
-                                      <svg width="50%" height="auto" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                          <linearGradient id="gradient1" gradientTransform="rotate(30)">
-                                              <stop offset="0%" stopColor="#8E2DE2" />
-                                              <stop offset="100%" stopColor="#4A00E0" />
-                                          </linearGradient>
-                                          <g transform="translate(300,300)">
-                                              <path d="M150.9,-167.9C176.4,-125.4,164.7,-62.7,161,-3.7C157.4,55.4,161.8,110.8,136.3,147.8C110.8,184.8,55.4,203.4,8.4,195C-38.7,186.7,-77.3,151.3,-122.3,114.3C-167.3,77.3,-218.7,38.7,-217,1.6C-215.4,-35.4,-160.7,-70.7,-115.7,-113.2C-70.7,-155.7,-35.4,-205.4,13.7,-219C62.7,-232.7,125.4,-210.4,150.9,-167.9Z" fill="url(#gradient1)" />
-                                          </g>
-                                          <g transform="translate(300,300)">
-                                              <path d="M150.9,-167.9C176.4,-125.4,164.7,-62.7,161,-3.7C157.4,55.4,161.8,110.8,136.3,147.8C110.8,184.8,55.4,203.4,8.4,195C-38.7,186.7,-77.3,151.3,-122.3,114.3C-167.3,77.3,-218.7,38.7,-217,1.6C-215.4,-35.4,-160.7,-70.7,-115.7,-113.2C-70.7,-155.7,-35.4,-205.4,13.7,-219C62.7,-232.7,125.4,-210.4,150.9,-167.9Z" fill="url(#gradient1)" />
-                                          </g>
-                                      </svg>
-                                  </div>
-                                  <div className="card-content">
-                                      <h2>Development</h2>
-                                      <h6>Applications &amp; services</h6>
-                                      <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                      <a href>Learn More <ion-icon name="chevron-forward-outline" /> </a>
-                                  </div>
-                              </div>
+                              <ServiceCard
+                                title="Systems"
+                                description="Administration and installation"
+                                body="As part of my job, I specialize in enterprise-grade Linux distributions, Docker deployments and database management."
+                                icon={<CgServer />}
+                                svg={
+                                    <svg width="50%" height="auto" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                        <linearGradient id="gradient2">
+                                            <stop offset="0%" stopColor="#FF416C" />
+                                            <stop offset="100%" stopColor="#FF4B2B" />
+                                        </linearGradient>
+                                        <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
+                                            <path d="M155.1,-133.4C190.4,-79.5,201,-15.6,182.4,32C163.9,79.6,116.2,111,64.3,137.6C12.3,164.3,-44,186.2,-102.7,173.3C-161.4,160.3,-222.5,112.5,-224.9,62.7C-227.2,12.8,-170.7,-39.1,-123.4,-95.7C-76.1,-152.4,-38,-213.7,10.9,-222.4C59.9,-231.1,119.9,-187.3,155.1,-133.4Z" fill="url(#gradient2)" />
+                                        </g>
+                                        <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
+                                            <path d="M155.1,-133.4C190.4,-79.5,201,-15.6,182.4,32C163.9,79.6,116.2,111,64.3,137.6C12.3,164.3,-44,186.2,-102.7,173.3C-161.4,160.3,-222.5,112.5,-224.9,62.7C-227.2,12.8,-170.7,-39.1,-123.4,-95.7C-76.1,-152.4,-38,-213.7,10.9,-222.4C59.9,-231.1,119.9,-187.3,155.1,-133.4Z" fill="url(#gradient2)" />
+                                        </g>
+                                    </svg>
+                                }
+                              />
                           </div>
                           <div className="col-12 col-md-6 col-lg-4 ">
-                              <div className="card text-dark" id="service-card" style={{background: 'white'}}>
-                                  <div className="card-icon">
-                                      <ion-icon name="easel-outline" />
-                                      <svg width="50%" height="auto" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                          <linearGradient id="gradient2">
-                                              <stop offset="0%" stopColor="#FF416C" />
-                                              <stop offset="100%" stopColor="#FF4B2B" />
-                                          </linearGradient>
-                                          <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
-                                              <path d="M155.1,-133.4C190.4,-79.5,201,-15.6,182.4,32C163.9,79.6,116.2,111,64.3,137.6C12.3,164.3,-44,186.2,-102.7,173.3C-161.4,160.3,-222.5,112.5,-224.9,62.7C-227.2,12.8,-170.7,-39.1,-123.4,-95.7C-76.1,-152.4,-38,-213.7,10.9,-222.4C59.9,-231.1,119.9,-187.3,155.1,-133.4Z" fill="url(#gradient2)" />
-                                          </g>
-                                          <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
-                                              <path d="M155.1,-133.4C190.4,-79.5,201,-15.6,182.4,32C163.9,79.6,116.2,111,64.3,137.6C12.3,164.3,-44,186.2,-102.7,173.3C-161.4,160.3,-222.5,112.5,-224.9,62.7C-227.2,12.8,-170.7,-39.1,-123.4,-95.7C-76.1,-152.4,-38,-213.7,10.9,-222.4C59.9,-231.1,119.9,-187.3,155.1,-133.4Z" fill="url(#gradient2)" />
-                                          </g>
-                                      </svg>
-                                  </div>
-                                  <div className="card-content">
-                                      <h2>Design</h2>
-                                      <h6>Websites &amp; email</h6>
-                                      <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                      <a href>Learn More <ion-icon name="chevron-forward-outline" /> </a>
-                                  </div>
-                              </div>
+                              <ServiceCard
+                                title="Devops"
+                                description="CI/CD and deployment"
+                                body="Key to every modern project, the Devops cycle has never been more important.  I have experience with Github, Gitlab and major CI/CD platforms such as CircleCI and Netlify"
+                                icon={<CgGitFork />}
+                                svg={
+                                  <svg width="50%" height="auto" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                                      <linearGradient id="gradient3" gradientTransform="rotate(-45)">
+                                          <stop offset="0%" stopColor="#0ba360" />
+                                          <stop offset="100%" stopColor="#3cba92" />
+                                      </linearGradient>
+                                      <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
+                                          <path d="M170.8,-134.2C200.9,-98.5,190.6,-28.7,175.9,41.9C161.2,112.4,142,183.7,96.7,208.4C51.5,233.1,-19.8,211.1,-85,178.8C-150.1,146.5,-209.1,103.9,-225.3,47.3C-241.5,-9.3,-215,-79.8,-170.3,-118.8C-125.6,-157.8,-62.8,-165.4,3.8,-168.4C70.4,-171.4,140.7,-169.9,170.8,-134.2Z" fill="url(#gradient3)" />
+                                      </g>
+                                      <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
+                                          <path d="M170.8,-134.2C200.9,-98.5,190.6,-28.7,175.9,41.9C161.2,112.4,142,183.7,96.7,208.4C51.5,233.1,-19.8,211.1,-85,178.8C-150.1,146.5,-209.1,103.9,-225.3,47.3C-241.5,-9.3,-215,-79.8,-170.3,-118.8C-125.6,-157.8,-62.8,-165.4,3.8,-168.4C70.4,-171.4,140.7,-169.9,170.8,-134.2Z" fill="url(#gradient3)" />
+                                      </g>
+                                  </svg>
+                                  }
+                              />
                           </div>
-                          <div className="col-12 col-md-6 col-lg-4 ">
-                              <div className="card text-dark" id="service-card" style={{background: 'white'}}>
-                                  <div className="card-icon">
-                                      <ion-icon name="terminal-outline" />
-                                      <svg width="50%" height="auto" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                                          <linearGradient id="gradient3" gradientTransform="rotate(-45)">
-                                              <stop offset="0%" stopColor="#0ba360" />
-                                              <stop offset="100%" stopColor="#3cba92" />
-                                          </linearGradient>
-                                          <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
-                                              <path d="M170.8,-134.2C200.9,-98.5,190.6,-28.7,175.9,41.9C161.2,112.4,142,183.7,96.7,208.4C51.5,233.1,-19.8,211.1,-85,178.8C-150.1,146.5,-209.1,103.9,-225.3,47.3C-241.5,-9.3,-215,-79.8,-170.3,-118.8C-125.6,-157.8,-62.8,-165.4,3.8,-168.4C70.4,-171.4,140.7,-169.9,170.8,-134.2Z" fill="url(#gradient3)" />
-                                          </g>
-                                          <g xmlns="http://www.w3.org/2000/svg" transform="translate(300,300)">
-                                              <path d="M170.8,-134.2C200.9,-98.5,190.6,-28.7,175.9,41.9C161.2,112.4,142,183.7,96.7,208.4C51.5,233.1,-19.8,211.1,-85,178.8C-150.1,146.5,-209.1,103.9,-225.3,47.3C-241.5,-9.3,-215,-79.8,-170.3,-118.8C-125.6,-157.8,-62.8,-165.4,3.8,-168.4C70.4,-171.4,140.7,-169.9,170.8,-134.2Z" fill="url(#gradient3)" />
-                                          </g>
-                                      </svg>
-                                  </div>
-                                  <div className="card-content">
-                                      <h2>Systems</h2>
-                                      <h6>Installation &amp; Management</h6>
-                                      <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                                      <a href>Learn More <ion-icon name="chevron-forward-outline" /> </a>
-                                  </div>
-                              </div>
+                      </div>
+                      <div className="row d-flex justify-content-center">
+                          <div className="col-12">
+                              <h1 className="section-lead mb-0" id="service-title">Technology</h1>
+                              <p className="subtitle" id="service-title">A few of the things I'm passionate about</p>
+                          </div>
+                      </div>
+                      <div className="row d-flex justify-content-center">
+                          <div className="col-12">
+                              <p>To be added</p>
                           </div>
                       </div>
                   </div>
@@ -221,6 +237,7 @@ const IndexPage = ({data}) => (
           </div>
       </Layout>
     )
+}
 export const query = graphql`
     query {
         allMarkdownRemark {
