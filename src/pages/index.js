@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import {graphql} from "gatsby"
+import { graphql, Link } from "gatsby"
 import ServiceCard from "../components/ServiceCard"
 import { CgCodeSlash, CgGitFork, CgServer } from "react-icons/all"
 import Particles from "react-particles-js"
@@ -163,7 +163,7 @@ const IndexPage = ({data}) => {
                                         <h2>{node.frontmatter.title}</h2>
                                         <h6>{node.frontmatter.description}</h6>
                                         <p style={{width: '100%'}}>{node.frontmatter.summary}</p>
-                                        <a href={'/portfolio/' + node.frontmatter.title.toLowerCase().replace(' ', '-')}> Read more <ion-icon name="chevron-forward-outline"/> </a>
+                                        <Link to={'/portfolio/' + node.frontmatter.title.toLowerCase().replace(' ', '-')}>Read more</Link>
                                     </div>
                                 </div>
                             </div>
