@@ -23,17 +23,9 @@
     --font-bold: 500;
     --font-xbold: 700;
 }
-.grecaptcha-badge {
-    visibility: collapse !important;
-}
 * {
     font-family: var(--font-family);
     color: var(--grey);
-}
-ion-icon {
-    font-size: 1rem;
-    display: inline-block;
-    vertical-align: middle;
 }
 .closeIcon {
     font-size: 2.5rem;

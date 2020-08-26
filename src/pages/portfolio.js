@@ -9,7 +9,7 @@ const PortfolioPage = ({data}) => (
     <section style={{background: 'var(--gradient)'}}>
       <Particles id="particles-container" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} params={particlesConfig} />
       <div className="container">
-        <div className="row d-flex align-content-center headerContent" style={{height: '50vh'}}>
+        <div className="row d-flex align-content-center headerContent" style={{height: '60vh'}}>
           <div className="col-12">
             <h1 className="header-lead" style={{width: '100%'}}>THIS IS MY</h1>
             <h1 className="header-lead">Portfolio</h1>
