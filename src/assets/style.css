@@ -13,6 +13,7 @@
     --grey-lighten-2: rgba(46, 46, 46, 0.2);
     /*--gradient: linear-gradient(to bottom, #3a338a, #7a5295);*/
     --gradient: linear-gradient(to bottom, #3a338a, #8E2DE2);
+    --gradientTransparent: linear-gradient(200deg, rgba(58,51,138,0.3) ,rgba(142,45,226,1));
     --gradient-2: linear-gradient(to top right, #3a338a, #8E2DE2);
     --accent-gradient: linear-gradient(to left, rgba(118, 221, 200, 1), rgba(92, 173, 157, 1));
 
@@ -33,6 +34,13 @@ ion-icon {
     font-size: 1rem;
     display: inline-block;
     vertical-align: middle;
+}
+.closeIcon {
+    font-size: 2.5rem;
+    opacity: 0.9;
+}
+.closeIcon path {
+    fill: var(--grey);
 }
 h1 {
     font-size: 2.5rem;

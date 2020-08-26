@@ -17,7 +17,7 @@ const IndexPage = ({data}) => {
                       <div className="row d-flex align-content-center headerContent" style={{height: '100vh'}}>
                           <h1 className="header-lead" style={{width: '100%'}}>HEY THERE!</h1>
                           <h1 className="header-lead">I'm Tom</h1>
-                          <p className="lead text-secondary pb-4">Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
+                          <p className="lead text-secondary pb-4" style={{textShadow: '0 0 10px rgba(0,0,0,0.2)'}}>Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
                       </div>
                   </div>
                   <div id="about" style={{position: 'absolute', bottom: '5rem'}} />
