@@ -13,6 +13,7 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import particlesConfig from "./particlesConfig"
 import Particles from "react-particles-js"
 import NavBar from "../components/NavBar"
+import HelmetSEO from "../components/Helmet"
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+      <HelmetSEO />
       <NavBar siteLocation={location} />
       <div>
         <main>{children}</main>

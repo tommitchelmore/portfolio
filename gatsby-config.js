@@ -1,8 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: "Tom Mitchelmore",
+    titleTemplate: "%s · Tom Mitchelmore",
+    author: "Tom Mitchelmore",
+    description:
+      "Hey! I'm Tom and I'm an undergraduate student of Computer Science at the University of Southampton in the UK.\n" +
+      " Currently, alongside my studies, I work for a small game server hosting company as a systems administrator\n" +
+      " and am actively learning React, Java and Python.",
+    url: "https://www.tommitchelmore.me",
+    twitterUsername: "@tommitchelmore_",
+    theme_color: '#37308b',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
