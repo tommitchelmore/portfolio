@@ -18,6 +18,7 @@ export default function Template({ data }) {
             <div className="col-12 pb-3">
               <h1 className="header-lead">PORTFOLIO</h1>
               <h1 className="header-lead">{frontmatter.title}</h1>
+              <p className="lead my-0 text-accent" style={{textShadow: '0 5px 30px rgba(0,0,0,0.4)'}}>{frontmatter.description}</p>
             </div>
           </div>
         </div>
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 summary
+                description
                 image {
                     publicURL
                 }
