@@ -12,8 +12,9 @@ import '../assets/style.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import particlesConfig from "./particlesConfig"
 import Particles from "react-particles-js"
+import NavBar from "../components/NavBar"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <NavBar siteLocation={location} />
       <div>
         <main>{children}</main>
         <footer className={"gradient-2"} style={{position: "relative"}}>
