@@ -8,7 +8,6 @@ import Particles from "react-particles-js"
 import particlesConfig from "../components/particlesConfig"
 
 const IndexPage = ({data}) => {
-    let parallax;
     return (
       <Layout location="index">
           <div>
@@ -158,11 +157,11 @@ const IndexPage = ({data}) => {
                           </div>
                           {data.allMarkdownRemark.edges.map(({node}) => (
                             <div className="col-12 col-md-6 col-lg-4 " key={node.id}>
-                                <div className="card text-dark" id="portfolio-card" style={{background: 'white'}}>
+                                <div className="card text-dark" id="portfolio-card">
+                                    <div className="card-header" style={{backgroundImage: `url(${node.frontmatter.thumbnail.publicURL})`}}></div>
                                     <div className="card-content">
                                         <h2>{node.frontmatter.title}</h2>
-                                        <h6>{node.frontmatter.description}</h6>
-                                        <p style={{width: '100%'}}>{node.frontmatter.summary}</p>
+                                        <h6 className={"pb-4"}>{node.frontmatter.description}</h6>
                                         <Link to={'/portfolio/' + node.frontmatter.title.toLowerCase().replace(' ', '-')}>Read more</Link>
                                     </div>
                                 </div>
@@ -216,11 +215,6 @@ const IndexPage = ({data}) => {
                                       <label htmlFor="text" />
                                       <textarea id="text" name="msg" placeholder="Your message" required defaultValue={""} />
                                   </div>
-                                  <div className="col-12" style={{padding: '1rem 0'}}>
-                                      <p className="note" style={{padding: '0 24px'}}>This site is protected by reCAPTCHA and the Google
-                                          <a href="https://policies.google.com/privacy" target="_blank" className="text-primary">Privacy Policy</a> and
-                                          <a href="https://policies.google.com/terms" target="_blank" className="text-primary">Terms of Service</a> apply.</p>
-                                  </div>
                                   <div className="col-12 justify-content-center">
                                       <button className="btn btn-primary" type="submit">Submit</button>
                                       <button className="btn btn-primary" type="reset">Reset</button>
@@ -248,6 +242,9 @@ export const query = graphql`
                         title
                         description
                         summary
+                        thumbnail {
+                            publicURL
+                        }
                     }
                     html
                 }

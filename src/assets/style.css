@@ -307,10 +307,8 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
 .card {
     box-shadow: 0 0 30px 0 rgba(0,0,0,0.06);
     box-sizing: border-box;
-    padding: 2rem;
-    border-radius: 1rem;
-    border: solid 3px white;
-    transition: border 0.3s, box-shadow 0.3s;
+    border-radius: 2rem 2rem 1rem 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 2rem;
 }
 .services-cards {
@@ -343,6 +341,9 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2rem;
+    background: white;
+    border-radius: 0 0 1rem 1rem;
 }
 .card-content h2 {
     margin: 0;
@@ -361,8 +362,15 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
     margin: 2rem 0 0 0;
 }
 .card:hover {
-    border: solid 3px var(--accent);
-    box-shadow: 0 0 30px 0 rgba(0,0,0,0.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.1);
+}
+.card a {
+    border-bottom: solid 3px transparent;
+    transition: border-bottom-color 0.3s;
+}
+.card:hover a {
+    border-bottom: solid 2px var(--accent);
 }
 .card:hover svg:first-child {
     transform: rotate(-360deg);
@@ -370,7 +378,13 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
 #service-card:hover svg g:last-child path {
     transform: rotate(45deg);
 }
-
+.card-header {
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
 
 #contact form {
 
