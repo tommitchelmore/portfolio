@@ -7,13 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import '../assets/style.css'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import particlesConfig from "./particlesConfig"
 import Particles from "react-particles-js"
 import NavBar from "../components/NavBar"
 import HelmetSEO from "../components/Helmet"
+
+import {IoLogoLinkedin, IoLogoGithub, IoLogoNpm} from "react-icons/io/index"
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
@@ -53,29 +55,27 @@ const Layout = ({ children, location }) => {
                   <h3 className="text-white">Tom Mitchelmore</h3>
                   <p className="text-white">Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
                   <div className="social-icons">
-                    <a href="https://www.linkedin.com/in/thomas-mitchelmore-3a3814175/" target="_blank"><ion-icon name="logo-linkedin" size="large" /></a>
-                    <a href="https://github.com/tommitchelmore" target="_blank"><ion-icon name="logo-github" size="large" /></a>
-                    <a href="https://www.npmjs.com/~tommitchelmore" target="_blank"><ion-icon name="logo-npm" size="large" /></a>
-                    <a href="https://dribbble.com/tommitchelmore" target="_blank"><ion-icon name="logo-dribbble" size="large" /></a>
-                    <a href="https://stackoverflow.com/users/8671742/tom-mitchelmore" target="_blank"><ion-icon name="logo-stackoverflow" size="large" /></a>
+                    <a href="https://www.linkedin.com/in/thomas-mitchelmore-3a3814175/" target="_blank"><IoLogoLinkedin className="footerIcon" /></a>
+                    <a href="https://github.com/tommitchelmore" target="_blank"><IoLogoGithub className="footerIcon" /></a>
+                    <a href="https://www.npmjs.com/~tommitchelmore" target="_blank"><IoLogoNpm className="footerIcon" /></a>
                   </div>
                 </div>
                 <div className="col-6 col-lg-3">
                   <h3 className="text-white">Quick Links</h3>
                   <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/#about">About</a></li>
-                    <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="/#contact">Contact</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/#about">About</Link></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/#contact">Contact</Link></li>
                   </ul>
                 </div>
                 <div className="col-6 col-lg-3">
-                  <h3 className="text-white">Quick Links</h3>
+                  <h3 className="text-white">Posts</h3>
                   <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/#about">About</a></li>
-                    <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="/#contact">Contact</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/#about">About</Link></li>
+                    <li><Link to="/portfolio">Portfolio</Link></li>
+                    <li><Link to="/#contact">Contact</Link></li>
                   </ul>
                 </div>
               </div>

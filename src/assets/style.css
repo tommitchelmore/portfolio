@@ -532,9 +532,13 @@ footer a {
     color: var(--white);
     font-weight: var(--font-light);
 }
-footer ion-icon {
+footer .footerIcon {
     color: var(--white);
+    font-size: 3rem;
     padding-right: 1rem;
+}
+footer .footerIcon path {
+    fill: var(--white);
 }
 footer .bottom {
     border-top: solid 1px rgba(255,255,255,0.2);
