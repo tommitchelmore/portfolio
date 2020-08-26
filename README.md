@@ -1,6 +1,6 @@
-# Personal portfolio
-Welcome to the README for my portfolio.  Written in React, making use of the JAMStack and served over a global CDN; I'm exploring the newest web technologies and moving beyond the safety of PHP and a web server.<br>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/54fcf62d-e822-4747-8644-c1eff2075567/deploy-status)](https://app.netlify.com/sites/tommitchelmore/deploys)
+# Personal portfolio 
+Welcome to the README for my portfolio.  Written in React, making use of the JAMStack and served over a global CDN; I'm exploring the newest web technologies and moving beyond the safety of PHP and a web server.
 
 ## 🤔 What is JAMStack?
 Javascript, API's, Markdown - the JAMStack is a growing way of approaching web development that prioritises speed, developer utility and overall performance.
