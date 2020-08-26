@@ -18,9 +18,6 @@ const IndexPage = ({data}) => {
                           <h1 className="header-lead" style={{width: '100%'}}>HEY THERE!</h1>
                           <h1 className="header-lead">I'm Tom</h1>
                           <p className="lead text-secondary pb-4">Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
-                          <div className="col-12">
-                              <a href style={{display: 'inline-block'}} className="btn-large btn-accent d-none d-md-inline-block">Learn More</a>
-                          </div>
                       </div>
                   </div>
                   <div id="about" style={{position: 'absolute', bottom: '5rem'}} />
@@ -167,6 +164,9 @@ const IndexPage = ({data}) => {
                                 </div>
                             </div>
                           ))}
+                          <div className={"col-12 d-flex justify-content-center"}>
+                              <Link to={"/portfolio"} className={"btn btn-accent btn-medium"}>View all</Link>
+                          </div>
                       </div>
                       <svg viewBox="0 0 1440 400" />
                   </div>
@@ -234,7 +234,7 @@ const IndexPage = ({data}) => {
 }
 export const query = graphql`
     query {
-        allMarkdownRemark {
+        allMarkdownRemark(limit:3) {
             edges {
                 node {
                     id
