@@ -14,7 +14,7 @@ export default function Template({ data }) {
       <section className={"portfolioHeader"} style={{backgroundImage: `var(--gradientTransparent), url(${frontmatter.image.publicURL})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <Particles id="particles-container" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} params={particlesConfig} />
         <div className="container">
-          <div className="row d-flex align-content-center headerContent" style={{height: '60vh'}}>
+          <div className="row d-flex align-content-center headerContent" style={{height: '80vh'}}>
             <div className="col-12 pb-3">
               <h1 className="header-lead">PORTFOLIO</h1>
               <h1 className="header-lead">{frontmatter.title}</h1>
@@ -42,7 +42,7 @@ export default function Template({ data }) {
 
             </div>
             <div className="col-12">
-              <p className={"lead"}>{frontmatter.summary} <span style={{position: 'absolute', top: '1.25rem', right: 0}}><Link style={{textAlign: 'right', marginLeft: 'auto'}} to={"/portfolio"}><CgClose className={"closeIcon"} /></Link></span></p>
+              <p className={"lead text-secondary"} style={{textShadow: '0 10px 30px rgba(0,0,0,0.3)'}}>{frontmatter.summary} <span style={{position: 'absolute', top: '1.25rem', right: 0}}><Link style={{textAlign: 'right', marginLeft: 'auto'}} to={"/portfolio"}><CgClose className={"closeIcon"} /></Link></span></p>
             </div>
             <div className="col-12">
               <p dangerouslySetInnerHTML={{__html: html}}></p>
