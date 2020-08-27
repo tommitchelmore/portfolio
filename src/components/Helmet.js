@@ -7,7 +7,6 @@ const seo = () => (
     <meta name="title" content="Tom Mitchelmore - Student Developer" />
     <meta name="description" content="Hey! I'm Tom and I'm an undergraduate student of Computer Science at the University of Southampton in the UK. Currently, alongside my studies, I work for a small game server hosting company as a systems administrator and am actively learning React, Java and Python."/>
     <link rel="canonical" href="https://tommitchelmore.me" />
-    <link rel="canonical" href="https://www.tommitchelmore.me" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -28,6 +27,7 @@ const seo = () => (
     <meta property="twitter:title" content="Tom Mitchelmore - Student Developer"/>
     <meta property="twitter:description" content="Hey! I'm Tom and I'm an undergraduate student of Computer Science at the University of Southampton in the UK. Currently, alongside my studies, I work for a small game server hosting company as a systems administrator and am actively learning React, Java and Python."/>
     <meta property="twitter:image" content="/thumbnail.png"/>
+    <html lang="en" />
   </Helmet>
 )
 

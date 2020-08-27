@@ -55,9 +55,9 @@ const Layout = ({ children, location }) => {
                   <h3 className="text-white">Tom Mitchelmore</h3>
                   <p className="text-white">Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
                   <div className="social-icons">
-                    <a href="https://www.linkedin.com/in/thomas-mitchelmore-3a3814175/" target="_blank"><IoLogoLinkedin className="footerIcon" /></a>
-                    <a href="https://github.com/tommitchelmore" target="_blank"><IoLogoGithub className="footerIcon" /></a>
-                    <a href="https://www.npmjs.com/~tommitchelmore" target="_blank"><IoLogoNpm className="footerIcon" /></a>
+                    <a href="https://www.linkedin.com/in/thomas-mitchelmore-3a3814175/" rel="noopener" target="_blank"><IoLogoLinkedin className="footerIcon" /></a>
+                    <a href="https://github.com/tommitchelmore" rel="noopener" target="_blank"><IoLogoGithub className="footerIcon" /></a>
+                    <a href="https://www.npmjs.com/~tommitchelmore" rel="noopener" target="_blank"><IoLogoNpm className="footerIcon" /></a>
                   </div>
                 </div>
                 <div className="col-6 col-lg-3">
