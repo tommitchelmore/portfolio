@@ -2,7 +2,7 @@
 title: Harler
 description: Custom wordpress theme, including custom plugins for managing content.
 thumbnail: ahmkjzr.png
-image: hqzf4ay.jpg
+image: zfaxm0v.jpg
 summary: In early 2020, Harler approached me in need of a new website to support
   their exciting relaunching of the company.  This was to include large volumes
   of content and a strong company brand.
