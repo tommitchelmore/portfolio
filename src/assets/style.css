@@ -318,7 +318,7 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
     right: -400px;
     background: var(--white);
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
-    width: 400px;
+    width: 40%;
     height: 100vh;
     transition: right 0.3s ease;
 }
