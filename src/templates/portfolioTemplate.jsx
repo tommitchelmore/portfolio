@@ -10,7 +10,7 @@ export default function Template({ data }) {
   const {frontmatter, html} = markdownRemark
 
   return (
-    <Layout location="portfolio">
+    <Layout>
       <section className={"portfolioHeader"} style={{backgroundImage: `var(--gradientTransparent), url(${frontmatter.image.publicURL})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <Particles id="particles-container" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} params={particlesConfig} />
         <div className="container">
@@ -26,12 +26,12 @@ export default function Template({ data }) {
         <div className="waves-fix waves-bottom" />
         <div className="waves2 waves-bottom">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fillOpacity={1} d="M0,160L48,165.3C96,171,192,181,288,202.7C384,224,480,256,576,272C672,288,768,288,864,277.3C960,267,1056,245,1152,229.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+            <path d="M0,160L60,149.3C120,139,240,117,360,138.7C480,160,600,224,720,245.3C840,267,960,245,1080,213.3C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
           </svg>
         </div>
         <div className="waves waves-bottom">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fillOpacity={1} d="M0,160L48,165.3C96,171,192,181,288,202.7C384,224,480,256,576,272C672,288,768,288,864,277.3C960,267,1056,245,1152,229.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+            <path d="M0,160L60,149.3C120,139,240,117,360,138.7C480,160,600,224,720,245.3C840,267,960,245,1080,213.3C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
           </svg>
         </div>
       </section>

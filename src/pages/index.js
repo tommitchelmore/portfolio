@@ -9,7 +9,7 @@ import particlesConfig from "../components/particlesConfig"
 
 const IndexPage = ({data}) => {
     return (
-      <Layout location="index">
+      <Layout>
           <div>
               <section style={{background: 'var(--gradient)'}}>
                   <Particles id="particles-container" style={{position: 'absolute', top: 0, left: 0, height: '100%', width: '100%'}} params={particlesConfig} />
