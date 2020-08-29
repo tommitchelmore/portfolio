@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import ServiceCard from "../components/ServiceCard"
+import Technology from "../components/Technology"
 import { CgCodeSlash, CgGitFork, CgServer } from "react-icons/all"
 import Particles from "react-particles-js"
 import particlesConfig from "../components/particlesConfig"
@@ -43,7 +44,7 @@ const IndexPage = ({data}) => {
                               <p className="subtitle" id="service-title">A little about me and what I can do</p>
                               <p>
                                   Hey! I'm Tom and I'm an undergraduate student of Computer Science at the University of Southampton in the UK.
-                                  Currently, alongside my studies, I work for a small game server hosting company as a systems administrator
+                                  Currently, alongside my studies, I work for a game server and VPS hosting company as a systems administrator
                                   and am actively learning React, Java and Python.
                               </p>
                               <p className={"mb-5"}>
@@ -100,7 +101,7 @@ const IndexPage = ({data}) => {
                           </div>
                           <div className="col-12 col-md-6 col-lg-4 ">
                               <ServiceCard
-                                title="Devops"
+                                title="DevOps"
                                 description="CI/CD and deployment"
                                 body="Key to every modern project, the Devops cycle has never been more important.  I have experience with Github, Gitlab and major CI/CD platforms such as CircleCI and Netlify"
                                 icon={<CgGitFork />}
@@ -128,8 +129,11 @@ const IndexPage = ({data}) => {
                           </div>
                       </div>
                       <div className="row d-flex justify-content-center">
-                          <div className="col-12">
-                              <p>To be added</p>
+                          <div className="col-12 col-lg-6 d-flex align-items-center">
+                              content
+                          </div>
+                          <div className="col-6 d-none d-lg-block">
+                              <Technology />
                           </div>
                       </div>
                   </div>
