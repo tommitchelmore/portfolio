@@ -417,13 +417,13 @@ nav.alt h1, nav.alt p, nav.alt a, nav.alt svg {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
 }
-.wordCloud div svg g text {
+.wordCloud svg g text {
     fill: var(--grey-lighten-1) !important;
     transition: fill 0.2s;
     cursor: default;
     font-weight: var(--font-xbold);
 }
-.wordCloud div svg g text:hover {
+.wordCloud svg g text:hover {
     fill: var(--primary) !important;
 }
 #contact form {
