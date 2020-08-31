@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Particles from "react-particles-js"
 import particlesConfig from "../components/particlesConfig"
 import { graphql, Link } from "gatsby"

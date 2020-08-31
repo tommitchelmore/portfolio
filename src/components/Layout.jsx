@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import particlesConfig from "./particlesConfig"
 import Particles from "react-particles-js"
 import NavBar from "../components/NavBar"
-import HelmetSEO from "../components/Helmet"
+import HelmetSEO from "./Helmet"
 
 import {IoLogoLinkedin, IoLogoGithub, IoLogoNpm} from "react-icons/io/index"
 
@@ -53,7 +53,7 @@ const Layout = ({ children, location }) => {
               <div className="row">
                 <div className="col-12 col-lg-6">
                   <h3 className="text-white">Tom Mitchelmore</h3>
-                  <p className="text-white">Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
+                  <p className="text-white">Full time student with proven ability in full-stack web development, systems engineering and more.</p>
                   <div className="social-icons">
                     <a href="https://www.linkedin.com/in/thomas-mitchelmore-3a3814175/" rel="noopener" target="_blank"><IoLogoLinkedin className="footerIcon" /></a>
                     <a href="https://github.com/tommitchelmore" rel="noopener" target="_blank"><IoLogoGithub className="footerIcon" /></a>

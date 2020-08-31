@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { graphql, Link } from "gatsby"
 import ServiceCard from "../components/ServiceCard"
 import Technology from "../components/Technology"
@@ -19,7 +19,8 @@ const IndexPage = ({data}) => {
                           <div className="col-12">
                               <h1 className="header-lead" style={{width: '100%'}}>HEY THERE!</h1>
                               <h1 className="header-lead">I'm Tom</h1>
-                              <p className="lead text-secondary pb-4" style={{textShadow: '0 0 10px rgba(0,0,0,0.2)'}}>Full-stack web developer and systems administrator with proven abilities in javascript, PHP and more.</p>
+                              <p className="lead text-secondary pb-4" style={{textShadow: '0 0 10px rgba(0,0,0,0.2)'}}>
+                                  Full time student with proven ability in full-stack web development, systems engineering and more.</p>
                           </div>
                       </div>
                   </div>
@@ -58,7 +59,7 @@ const IndexPage = ({data}) => {
                               <ServiceCard
                                 title="Web"
                                 description="Development and design"
-                                body="With experience in Static/Dynamic Websites, Javascript, React and a plethora of backend languages/frameworks, I'm more than ready for projects in the web."
+                                body="With experience in Static/Dynamic Websites, Javascript, React and a plethora of backend languages/frameworks, I'm more than ready for projects on the web."
                                 icon={<CgCodeSlash />}
                                 color={["#8E2DE2", "#4A00E0"]}
                                 svg={
@@ -129,10 +130,20 @@ const IndexPage = ({data}) => {
                           </div>
                       </div>
                       <div className="row d-flex justify-content-center">
-                          <div className="col-12 col-lg-6 d-flex align-items-center">
-                              content
+                          <div className="col-12 col-lg-6 d-flex align-items-center flex-column justify-content-center">
+                              <p>
+                                  While Web Development is my field of expertise, I also have a strong interest in many other areas
+                                  of computing.  Most notably I am fascinated by large, complicated systems such as Microsoft Active
+                                  Directory and different network solutions.  In addition to this, as part of my degree, I will
+                                  be studying modules that relate to all areas of the industry - for example: data management, intelligent
+                                  systems, computational biology and many more.
+                              </p>
+                              <p>
+                                  In terms of my professional experience, I enjoy working with many different technology "stacks" and
+                                  understand that there is an ideal tool for every application
+                              </p>
                           </div>
-                          <div className="col-6 d-none d-lg-block">
+                          <div className="col-6 d-none d-lg-flex align-items-center">
                               <Technology />
                           </div>
                       </div>
