@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@sentry/react": "^5.23.0",
+    "@sentry/tracing": "^5.23.0",
     "bootstrap": "^4.5.2",
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
@@ -13,6 +15,7 @@
     "gatsby-plugin-offline": "^3.2.23",
     "gatsby-plugin-page-transitions": "^1.0.8",
     "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.6.27",
     "gatsby-plugin-transition-link": "^1.20.2",
     "gatsby-source-filesystem": "^2.3.24",
